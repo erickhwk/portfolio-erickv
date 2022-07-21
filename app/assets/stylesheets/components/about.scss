@@ -1,0 +1,53 @@
+.about-container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.about-img {
+  width: 480px;
+  border-radius: .75rem;
+  justify-self: center;
+}
+
+.about-heading {
+  font-size: var(--h3-size);
+  margin-bottom: .75rem;
+}
+
+.about-description {
+  padding-right: 6rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+
+  a {
+    color: var(--detail-color);
+  }
+}
+
+.about-info {
+  grid-template-columns: repeat(3, 140px);
+  gap: .5rem;
+  margin-bottom: 3rem;
+}
+
+.about-box {
+  text-align: center;
+  border-radius: .25rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--sidebar-color);
+}
+
+.about-icon {
+  font-size: 1.5rem;
+  color: var(--detail-color);
+  margin-bottom: .75rem;
+}
+
+.about-title {
+  font-size: var(--small-size);
+}
+
+.about-subtitle {
+  font-size: var(--smallest-size);
+}

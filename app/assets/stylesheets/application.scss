@@ -1,0 +1,152 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "font-awesome";
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+// Components
+@import "./components/about.scss";
+@import "./components/contact.scss";
+@import "./components/footer.scss";
+@import "./components/main.scss";
+@import "./components/qualification.scss";
+@import "./components/sidebar.scss";
+@import "./components/skills.scss";
+@import "./components/work.scss";
+
+
+:root {
+
+  // Colors
+  --body-color: #0d051d;
+  --sidebar-color: #170035;
+
+  --title-color: #FB208F;
+  --text-color: #fff;
+
+  --detail-color: #FB208F;
+  --line-color: #170035;
+
+  // Typography
+  --default-font: "Ubuntu", sans-serif;
+
+  // Font Size
+  --biggest-size: 3rem;
+  --h1-size: 2.25rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.25rem;
+  --text-size: 1rem;
+  --small-size: .875rem;
+  --smallest-size: .813rem;
+
+  // Font Weight
+  --font-light: 300;
+  --font-medium: 400;
+  --font-bold: 700;
+}
+
+
+//  BASE
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-size: var(--text-size);
+  font-family: var(--default-font);
+  color: var(--text-color);
+}
+
+body {
+  background: var(--body-color);
+  font-size: var(--text-size);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--font-bold);
+  color: var(--title-color);
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 6.5rem 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: var(--h1-size);
+  margin-bottom: 3rem;
+  color: var(--text-color);
+
+  &::before {
+    content: attr(data-heading);
+    display: block;
+    font-size: var(--text-size);
+    font-weight: var(--font-medium);
+    color: var(--detail-color);
+  }
+}
