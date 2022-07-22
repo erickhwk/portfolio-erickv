@@ -53,30 +53,31 @@ function portfolioItemDetails(portfolioItem) {
 };
 
 // Navbar highlight
-const sections = document.querySelectorAll('section[id]');
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll(".nav-item a");
 
-console.log(sections)
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
 
-window.addEventListener("scroll", navHighLighter);
+    current = section.getAttribute("id");
+    let current_link = document.querySelector('.nav-menu a[href*=' + current + ']')
 
-function navHighLighter()
-{
-  let scrollY = window.pageYOffset;
+    if (scrollY >= sectionTop * .8) {
+      current = section.getAttribute("id");
 
-  sections.forEach(current => {
-    const sectionHeight = current.offsetHeight
-    const sectionTop = current.offsetTop - 50,
-    sectionId = current.getAttribute('id');
+      navLi.forEach((li) => {
+        li.classList.remove("active-link");
+      })
+      current_link.classList.add('active-link')
 
-    console.log(sectionId)
+    }else{
 
-    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
-    {
-      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add(".active-link")
+      current = section.getAttribute("id");
+      current_link = document.querySelector('.nav-menu a[href*=' + current + ']')
+      current_link.classList.remove('active-link')
     }
-    else
-    {
-      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove(".active-link")
-    }
-  })
-}
+  });
+});
