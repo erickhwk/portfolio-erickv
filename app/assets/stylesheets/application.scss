@@ -150,3 +150,13 @@ button {
     color: var(--detail-color);
   }
 }
+
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: var(--sidebar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--detail-color);
+  border-radius: .5rem;
+}

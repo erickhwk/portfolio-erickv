@@ -32,16 +32,6 @@ const tabs =  document.querySelectorAll('[data-target]'),
         })
       });
 
-// MixItUp
-// let mixer = mixitup('.work-container', {
-//   selectors: {
-//       target: '.work-card'
-//   },
-//   animation: {
-//       duration: 300
-//   }
-// });
-
 // Portfolio Popup
 document.addEventListener("click", (e) => {
   if(e.target.classList.contains("work-button")) {
@@ -60,4 +50,33 @@ function portfolioItemDetails(portfolioItem) {
   document.querySelector(".pp-thumbnail img").src = portfolioItem.querySelector(".work-img").src;
   document.querySelector(".portfolio-popup-subtitle span").innerHTML = portfolioItem.querySelector(".work-title").innerHTML;
   document.querySelector(".portfolio-popup-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
+};
+
+// Navbar highlight
+const sections = document.querySelectorAll('section[id]');
+
+console.log(sections)
+
+window.addEventListener("scroll", navHighLighter);
+
+function navHighLighter()
+{
+  let scrollY = window.pageYOffset;
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 50,
+    sectionId = current.getAttribute('id');
+
+    console.log(sectionId)
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+    {
+      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add(".active-link")
+    }
+    else
+    {
+      document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove(".active-link")
+    }
+  })
 }
