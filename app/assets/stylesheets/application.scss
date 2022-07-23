@@ -160,3 +160,274 @@ button {
   background-color: var(--detail-color);
   border-radius: .5rem;
 }
+
+@media screen and (max-width: 1408px) {
+  .container {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .about-container {
+    gap: 2.5rem;
+  }
+
+  .about-description {
+    padding: 0;
+  }
+
+  .work-container {
+    grid-template-columns: repeat(2, 330px);
+    gap: 2.5rem
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    z-index: 999;
+    transform: translateX(-100%);
+  }
+
+  .show-sidebar {
+    transform: translateX(0);
+  }
+
+  .nav-logo,
+  .btn-share {
+    display: none;
+  }
+
+  .nav-menu {
+    height: 100%;
+    width: 100%;
+    transform: rotate(0deg) translateX(0);
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 1rem 0;
+    line-height: 1.6;
+  }
+
+  .nav-close {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .about-img {
+    width: 350px;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem
+  }
+
+  .about-data {
+    text-align: center;
+  }
+
+  .about-info {
+    justify-content: center;
+  }
+
+  .about-box {
+    padding: .75rem .5rem;
+  }
+
+  .about-description {
+    padding: 0 4rem;
+    text-align: center;
+  }
+
+  .qualification-container {
+    grid-template-columns: repeat(2, 290px);
+  }
+
+  .skills-container {
+    grid-template-columns: 340px 300px;
+  }
+
+  .skills-list {
+    row-gap: 1.7rem;
+  }
+
+  .work-card {
+    padding: 1rem;
+  }
+
+  .work-img,
+  .work-title {
+    margin-bottom: .75rem;
+  }
+
+  .portfolio-item-details {
+    margin-bottom: 1.5rem;
+  }
+
+  .details-info li {
+    margin-bottom: .5rem;
+  }
+
+  .details-title {
+    margin-bottom: .75rem;
+  }
+}
+
+@media screen and (max-width: 738px) {
+  .about-img {
+    width: 250px;
+  }
+
+  .qualification-container {
+    grid-template-columns: 290px;
+  }
+
+  .skills-container {
+    grid-template-columns: 390px;
+  }
+
+  .work-container {
+    grid-template-columns: 330px;
+  }
+
+  .contact-container {
+    grid-template-columns: 360px;
+    row-gap: 3rem;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    // row-gap: 3rem;
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-self: start;
+    margin-top: -80px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .portfolio-popup-inner {
+    width: 420px;
+    padding: 2.8rem 1.5rem 2.5rem;
+  }
+
+  .portfolio-popup-content {
+    grid-template-columns: 1fr;
+    row-gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .nav-toggle {
+    right: initial;
+    left: 1.5rem;
+  }
+
+  .home {
+    background-image: none;
+    height: 100vh;
+    align-items: initial;
+  }
+
+  .home-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-social {
+    left: initial;
+    right: -1rem;
+    flex-direction: column;
+  }
+
+  .home-social-follow {
+    transform: rotate(90deg);
+    margin-top: 100px;
+    font-size: 1rem;
+  }
+
+  .home-social-links {
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-top: 40px;
+  }
+  .home-social-link {
+    font-size: 1rem;
+  }
+
+  .my-info {
+    display: none;
+  }
+
+  .about-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .qualification-container {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+
+  .work-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-toggle {
+    z-index: 999;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+
+  html {
+    font-size: 70%;
+  }
+
+  .about-description {
+    padding: 2rem 1rem;
+  }
+
+  .footer-socials {
+    justify-self: start;
+    margin-top: -20px;
+  }
+
+}

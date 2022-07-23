@@ -32,7 +32,7 @@ const tabs =  document.querySelectorAll('[data-target]'),
         })
       });
 
-// Portfolio Popup
+// PORTFOLIO POPUP
 document.addEventListener("click", (e) => {
   if(e.target.classList.contains("work-button")) {
     togglePortfolioPopup();
@@ -52,7 +52,7 @@ function portfolioItemDetails(portfolioItem) {
   document.querySelector(".portfolio-popup-body").innerHTML = portfolioItem.querySelector(".portfolio-item-details").innerHTML;
 };
 
-// Navbar highlight
+// NAVBAR HIGHLIGHT
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".nav-item a");
 
@@ -81,3 +81,20 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// RESPONSIVE SIDEBAR
+const navMenu = document.querySelector('.sidebar'),
+      navToggle = document.querySelector('.nav-toggle'),
+      navClose = document.querySelector('.nav-close');
+
+if(navToggle) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-sidebar')
+  })
+}
+
+if(navClose) {
+  navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show-sidebar')
+  })
+}

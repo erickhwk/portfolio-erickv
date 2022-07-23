@@ -4,6 +4,7 @@
   height: 100vh;
   border-right: 1px solid var(--line-color);
   background: var(--sidebar-color);
+  transition: .5s;
 }
 
 .nav-logo {
@@ -68,4 +69,29 @@
   text-align: center;
   color: var(--detail-color);
   font-size: var(--h2-size);
+}
+
+.nav-toggle {
+  height: 2rem;
+  width: 2.4rem;
+  cursor: pointer;
+  position: fixed;
+  right: 1.5rem;
+  top: 2rem;
+  font-size: 1.2rem;
+  border-radius: .25rem;
+  background: var(--detail-color);
+  color: var(--body-color);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-close {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  cursor: pointer;
+  display: none;
 }
