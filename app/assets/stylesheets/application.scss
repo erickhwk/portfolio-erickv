@@ -364,6 +364,15 @@ button {
     align-items: center;
   }
 
+  .home-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .home-description {
+    text-align: center;
+  }
+
   .home-social {
     left: initial;
     right: -1rem;
@@ -372,7 +381,7 @@ button {
 
   .home-social-follow {
     transform: rotate(90deg);
-    margin-top: 100px;
+    margin-top: 1.5rem;
     font-size: 1rem;
   }
 
@@ -391,6 +400,10 @@ button {
 
   .about-info {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-description {
+    padding: 2rem 1rem;
   }
 
   .qualification-container {
@@ -413,12 +426,32 @@ button {
     z-index: 999;
   }
 
+  .footer-socials {
+    margin-top: -2.5grem;
+  }
+
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
 
   html {
     font-size: 70%;
+  }
+
+  .home-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .home-description {
+    text-align: center;
   }
 
   .about-description {
